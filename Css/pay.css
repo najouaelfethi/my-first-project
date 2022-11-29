@@ -1,0 +1,91 @@
+/* Global Rules  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* End Global Rules  */
+
+.pay {
+    width: 50%;
+    margin: 5px auto;
+}
+.pay .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: #f6f6f6;
+    border: 2px dashed #333;
+}
+.pay .container i {
+    width: 60px;
+    height: 60px;
+    font-size: 85px;
+    color: #10c4ca;
+}
+.pay .container h3 {
+    font-size: 35px;
+    color: rgb(179, 160, 160);
+    text-shadow: 2px 2px 1px rgb(122, 108, 108);
+    position: relative;
+    left: 10px;
+}
+.pay .container form {
+    display: flex;
+    flex-direction: column;
+}
+.container form label {
+    padding: 5px;
+    margin: 5px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.container form input {
+    border: 2px solid rgb(155, 140, 140);
+    height: 35px;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+}
+.container form .typ {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items: center;
+    justify-content: center;
+}
+.container form .vis ,
+.container form .payp {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items: center;
+    justify-content: center;
+}
+.container form input:focus {
+    border: 2px solid #10c4ca;
+}
+.container form .sub {
+    padding: 10px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 39px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: red;
+}
+.container form .sub:hover {
+    background-color: #10c4ca;
+    color: red;
+    cursor: pointer;
+    border-radius: 20px;
+}

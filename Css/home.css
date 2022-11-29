@@ -1,0 +1,221 @@
+/* Start Variables  */
+:root {
+    --main-color: #10c4ca ;
+}
+/* End Variables  */
+/* Global Rules  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* End Global Rules  */
+/* Start header  */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2px solid rgb(214, 155, 155);
+}
+.header .logo {
+    width: 60px;
+}
+.header .links {
+    min-width: 500px;
+}
+.container .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.container .links ul a {
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    font-weight: bold;
+    padding: 5px;
+    color: black;
+    transition: 0.3s;
+}
+.container .links ul a:hover {
+    color: var(--main-color) ;
+}
+/* End Header  */
+/* Start Landing Section */
+.landing {
+    background-image: url(../Images/1200x630wa.png);
+    background-size: cover;
+    height: calc(100vh - 62px);
+    position: relative;
+}
+.landing .intro-text {
+    position: absolute;
+    text-align: center;
+    max-width: 80%;
+    left: 10%;
+}
+.landing .intro-text h1 {
+    margin: 0 ;
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+}
+.landing .intro-text p {
+    font-size: 30px;
+    line-height: 1.8;
+    font-weight: 800;
+    color: rgb(255, 7, 7);
+    letter-spacing: 3px;
+}
+/* End Landing Section */
+/* Start Login */
+.login .container {
+    width: 50%;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 20px;
+}
+.login .container form {
+    display: flex;
+    flex-direction: column;
+}
+.login .container i {
+    width: 100px;
+    height: 100px;
+    font-size: 85px;
+    text-align: center;
+}
+.login .container h1 {
+    margin: 0;
+    padding: 10px 0 40px ;
+    text-align: center;
+    font-size: 22px;
+    color: rgb(179, 160, 160);
+    text-shadow: 2px 2px 2px rgb(122, 108, 108);
+}
+.login .container p {
+    margin: 0;
+    width: fit-content;
+    padding: 10px;
+    font-weight: 600px;
+}
+.login .container form input {
+    width: 100%;
+}
+.login .container form input:focus {
+    border: 2px solid var(--main-color);
+}
+.pas-text {
+    border: 2px solid rgb(155, 140, 140);
+    outline: none;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+}
+.sub-text {
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: #fb2525;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+.sub-text:hover {
+    cursor: pointer;
+    background: darkcyan;
+    font-weight: bold;
+    color: #000;
+}
+.login .container a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+.login .container a:hover {
+    background: darkcyan;
+    color: #000;
+    text-decoration: underline;
+    border-radius: 20px;
+}
+/* End Login */
+/* Start Services  */
+.sevices {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f6f6f6;
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(3 ,auto);
+    gap: 1Opx;
+}
+.services .serv {
+    padding: 20px;
+    text-align: center;
+}
+.services .serv:nth-child(2) {
+    border-left: 2px solid #eee;
+    border-right: 2px solid #eee;
+}
+.services .serv i {
+    color: var(--main-color);
+    font-size: 50px;
+}
+.services .serv h3 {
+    font-weight: 800;
+    margin: 30px 0;
+    padding: 10px;
+    border: 2px solid #eee ;
+}
+.services .serv h4 {
+    font-weight: 800;
+    margin: 30px 0;
+    color: red;
+}
+.services .serv p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 18px;
+}
+/* End Services  */
+/* Start Contact  */
+.contact {
+    background-color: #eee;
+    padding: 10px 30px;
+}
+.contact h4 {
+    font-size: 35px;
+    margin: 0;
+    line-height: 1.6;
+}
+.contact .container p {
+    width: 400px;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+/* End Contact  */
