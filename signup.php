@@ -21,13 +21,12 @@ if(isset($_POST["envoyer"])){
     if(mysqli_num_rows($select) > 0){
     $msg[] = "User already exist";
 }
-else{
-    if($pwdC != $pwd){
-        $msg[] = "Password unmatched!";
-    }
-    elseif($photo_size > 2000000){
-    $msg[] = "Photo size is too large";
-    }
+if($pwdC != $pwd){
+    $msg[] = "Password unmatched!";
+}
+elseif($photo_size > 2000000){
+$msg[] = "Photo size is too large";
+}
     else{
         $insert = mysqli_query($conn, "INSERT INTO gestion_bus(nom, prenom, username, adresse, cin, email, pwd, pwdC) VALUES ('$nom', '$prenom', '$username', '$adresse', '$cin', '$email', '$pwd', '$pwdC')");
         if($insert){
