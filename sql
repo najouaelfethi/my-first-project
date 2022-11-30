@@ -15,11 +15,9 @@ CREATE TABLE `client` (
   `adresse` varchar(50) NOT NULL,
   `cin` varchar(10) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `photo` longblob NOT NULL,
   `pwd` varchar(30) NOT NULL,
-  `idcpt` int(11) NOT NULL,
-  `idab` int(11) NOT NULL,
-  `idetud` int(11) NOT NULL
+  `photo` longblob NOT NULL,
+  `carte` longblob NOT NULL
 ) 
 
 --Compte table
