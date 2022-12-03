@@ -1,50 +1,44 @@
-<?php 
-//{}
-@include 'dbConnection.php';
-if(isset($_POST["envoyer"])){
-    $nom = mysqli_real_escape_string($conn, $_POST["nom"]);
-    $prenom = mysqli_real_escape_string($conn, $_POST["prenom"]);
-    $username = mysqli_real_escape_string($conn, $_POST["username"]);
-    $adresse = mysqli_real_escape_string($conn, $_POST["adresse"]);
-    $cin = mysqli_real_escape_string($conn, $_POST["cin"]);
-    $email = mysqli_real_escape_string($conn, $_POST["email"]);
-    $pwd = mysqli_real_escape_string($conn, $_POST["pwd"]);
-    $pwdC = mysqli_real_escape_string($conn, $_POST["pwdC"]);
-    $photo = $_FILES["photo"]["name"];
-    $photo_size = $_FILES["photo"]["size"];
-    $phptp_temp_name = $_FILES["image"]["temp_name"];
-    $photo_folder = "uploaded_photo/".$photo;
-    $carte = $_FILES["carte"]["name"];
-    $carte_size = $_FILES["carte"]["size"];
-    $carte_folder = "uploaded_carte/".$carte;
-    $select = mysqli_query($conn, "SELECT * FROM client WHERE username = '$username' AND pwd = '$pwd'");
-    if(mysqli_num_rows($select) > 0){
-    $msg[] = "User already exist";
-}
-if($pwdC != $pwd){
-    $msg[] = "Password unmatched!";
-}
-elseif($photo_size > 2000000){
-$msg[] = "Photo size is too large";
-}
-    else{
-        $insert = mysqli_query($conn, "INSERT INTO client(nom, prenom, username, adresse, cin, email, pwd, pwdC) VALUES ('$nom', '$prenom', '$username', '$adresse', '$cin', '$email', '$pwd', '$pwdC')");
-        if($insert){
-            move_uploaded_file($photo_temp_name, $photo_folder){
-                $msg[] = "Registred successfully";
-                header("location: home.php");
-            }
-            else{
-                $msg[] = "Registration failed";
-            }
-        }
-    }
+<?php
+ if(isset($_POST['valider'])){
+    $myconn = mysqli_connect("localhost","root",""); 
+    if($myconn==false) die("Connexion impossible");
+    $selectdb = mysqli_select_db($myconn,"gestion_bus"); 
+    if($selectdb==false) die("Database inaccessible");
 
-if(isset($msg)){
-    foreach($msg as $msg){
-        echo "<div class="message">".$msg."</div>";
-    }
-   }
-}
+ $nom = $_POST['nom'] ;
+ $prenom = $_POST['prenom'] ;
+ $username = $_POST['username'] ;
+ $adresse = $_POST['adresse'] ;
+ $cin = $_POST['cin'] ;
+ $email = $_POST['email'] ;
+ $pass = $_POST['pwd'] ;
+ $cpass = $_POST['pwdc'] ;
+ $check = $_POST['checkstudent'] ;
+ $filename = $_FILES["photo"]["name"];
+ $tempname = $_FILES["photo"]["tmp_name"];
+ $folder = "./image_client/" . $filename;
+ if(strcmp($pass,$cpass)!=0) die("<h1>Passwords Are Not Identical</h1>") ;
+ $req = " select * from client where cin = '$cin' " ;
+ $res = mysqli_query($myconn,$req) ;
+ $nb = mysqli_num_rows($res) ;
+ if($nb > 0) die("<h1>User Already Exists</h1>") ;
+ else {
+    
+    $req = "insert into client values('$nom', '$prenom', '$username', '$adresse', '$cin', '$email','$filename', '$pass')" ;
+    mysqli_query($myconn,$req) ;
+    move_uploaded_file($tempname, $folder) ;
 
+    if(strcmp($check,"yes")==0) {
+      $filename = $_FILES["carte"]["name"];
+      $tempname = $_FILES["carte"]["tmp_name"];
+      $folder = "./doc_etud/" . $filename;
+      $req = "insert into etudiant(doc,cin) values ('$filename','$cin') " ;
+      mysqli_query($myconn,$req) ;
+      move_uploaded_file($tempname, $folder) ;
+    }
+    echo "<h1>Successful Authentication Welcome to our world</h1>" ;
+ }
+   mysqli_free_result($res) ;
+   mysqli_close($myconn) ;   
+}
 ?>
