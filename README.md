@@ -9,6 +9,7 @@
  3. Copy code from >sqlfile and paste it in SQL then execute
  
  *About website*
+ ##For Windows##
  1. create a folder for example 'bus project' in >htdocs
  2. Open folder in your texteditor, Pesonnaly l prefer VSCode
  5. create files in VsCode with .php and .html extensions then copy code from github and paste it in those files, save them in the folder created 
