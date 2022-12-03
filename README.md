@@ -9,9 +9,9 @@
  3. Copy code from >sqlfile and paste it in SQL then execute
  
  *About website*
- 1. create a file for example 'bus project' in >htdocs
- 2. Open your texteditor, Pesonnaly l prefer VSCode
- 5. create file in VsCode with .php and .html extensions then copy code from github and paste it in those files
+ 1. create a folder for example 'bus project' in >htdocs
+ 2. Open folder in your texteditor, Pesonnaly l prefer VSCode
+ 5. create files in VsCode with .php and .html extensions then copy code from github and paste it in those files, save them in the folder created 
  6. go to your browser and tape >localhost/bus project/login.html
  7. if you aren't a member, create an account 
  
