@@ -7,6 +7,7 @@
  1. Tape in your browser >localhost/phpmyadmin
  2. Go to >Nouvelle base de donne and create a database
  3. Copy code from >sqlfile and paste it in SQL then execute
+ 
  *About website*
  1. create a file for example 'bus project' in >htdocs
  2. Open your texteditor, Pesonnaly l prefer VSCode
