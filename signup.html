@@ -21,22 +21,17 @@
         <div class="container">
             <i class="fa-solid fa-user-plus"></i>
             <h3>Sign Up</h3>
-            <form action="signup.php" method="post" enctype="multipart/form-data">
-            <label>First Name :</label>
-                <input type="text" name="nom" required placeholder="your first name">
-                
+            <form action="signup.php" method="POST" enctype="multipart/form-data">
+                <label>First Name :</label>
+                <input type="text" name="nom" placeholder="your first name">
                 <label>Last Name :</label>
-                <input type="text" name="prenom" required placeholder="your last name">
-
+                <input type="text" name="prenom" placeholder="your last name">
                 <label>User Name :</label>
-                <input type="text" name="username" required placeholder="user name">
-                
+                <input type="text" name="username" placeholder="user name">
                 <label>Adress :</label>
-                <input type="text" name="adresse" required placeholder="your adress">
-                
+                <input type="text" name="adresse" placeholder="your adress">
                 <label>CIN :</label>
-                <input type="text" name="cin" required placeholder="cin">
-                
+                <input type="text" name="cin" placeholder="cin">
                 <label>Are you a Student ?</label>
                 <div class="yes">
                     <input id="y" type="radio" name="checkstudent" value="yes">
@@ -46,21 +41,17 @@
                     <input id="n" type="radio" name="checkstudent" value="no">
                     <label for="n" >No</label>
                 </div>
-               <label>Email :</label>
-                <input type="text" name="email" required placeholder="your email">
-                
+                <label>Email :</label>
+                <input type="text" name="email" placeholder="your email">
                 <label>Password :</label>
-                <input type="password" name="pwd" required placeholder="your password">
-                
+                <input type="password" name="pwd" placeholder="your password">
                 <label>Confirm Password :</label>
-                <input type="password" name="pwdc" required placeholder="confirm password">
-                
+                <input type="password" name="pwdc" placeholder="confirm password">
                 <label>Scan your photo :</label>
-                <input type="file" name="photo" required>
-                
-                <label>If you are a student scan your student card :</label>
-                <input type="file" name="carte" required>
-                <input class="sub" type="submit" name="valider" value="Sign Up">
+                <input type="file" name="photo">
+                <label>if you are a student scan your student card  :</label>
+                <input type="file" name="carte">
+                <button class="sub" type="submit" name="valider">Sign Up</button>
             </form>
         </div>
     </div>
