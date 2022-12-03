@@ -1,6 +1,5 @@
  ## General info
  this project is a bus abonnement site.
- **How it works**
  ## Requirements
  ## How to Install and Run the Project
  *About data base*
