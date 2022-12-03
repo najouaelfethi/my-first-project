@@ -1,0 +1,37 @@
+--Create database
+Create database gestion_bus ;
+
+--Create table client
+CREATE TABLE `client` (
+  `nom` varchar(27) NOT NULL,
+  `prenom` varchar(27) NOT NULL,
+  `username` varchar(27) NOT NULL,
+  `adresse` varchar(50) NOT NULL,
+  `cin` varchar(10) primay key ,
+  `email` varchar(30) NOT NULL,
+  `photofilename` varchar(100) NOT NULL,
+  `pwd` varchar(30) NOT NULL
+)
+--Create table etudiant
+
+CREATE TABLE `etudiant` (
+  `idetud` int(11) PRIMARY KEY auro_increment,
+  `doc` varchar(100) NOT NULL,
+  `cin` varchar(25) NOT NULL
+)
+--create table abonnement
+
+CREATE TABLE `abonnement` (
+  `idabonn` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `type` varchar(30) NOT NULL,
+  `prix` float NOT NULL,
+  `cin` varchar(20) NOT NULL
+)
+--create table paiement
+
+CREATE TABLE `paiement` (
+  `idpaie` int(25) PRIMARY KEY AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `cin` varchar(25) NOT NULL
+)
