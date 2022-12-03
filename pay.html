@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Home Style  -->
+    <link rel="stylesheet" href="Css/pay.css">
+    <!-- Render All Elements Normally  -->
+    <link rel="stylesheet" href="Css/normalize.css">
+    <!-- Font Awesome Library  -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700;800&family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title>BUS CARD / pay</title>
+</head>
+<body>
+    <div class="pay">
+        <div class="container">
+            <i class="fa-thin fa-dollar-sign"></i>
+            <h3>Pay Now</h3>
+            <form action="pay.php" method="post">
+                <label>First Name :</label>
+                <input type="text" name="nom" placeholder="your first name">
+                <label>Last Name :</label>
+                <input type="text" name="prenom" placeholder="your last name">
+                <label>CIN :</label>
+                <input type="text" name="cin" placeholder="your cin">
+                <label>Subscription Type :</label>
+                <div class="typ">
+                    <input id="ms" type="radio" name="typeabonn" value="monthlystudent">
+                    <label for="ms" >Monthly Student</label>
+                    <input id="mns" type="radio" name="typeabonn" value="monthlynotstudent">
+                    <label for="mns" >Monthly Not Student</label>
+                    <input id="a" type="radio" name="typeabonn" value="annual">
+                    <label for="a" >Annuel</label>
+                </div>
+                <label>Credit Card :</label>
+                <div class="vis">
+                    <input id="v" type="radio" name="typecarte" value="visa">
+                    <label for="v" >Visa</label>
+                </div>
+                <div class="payp">
+                    <input id="p" type="radio" name="typecarte" value="paypal">
+                    <label for="p" >Paypal</label>
+                </div>
+                <label>Card Number :</label>
+                <input type="nubmer" name="numcard" placeholder="card number">
+                <label>Expiration Date (month year) :</label>
+                <input type="month" name="datexpiration">
+                <input class="sub" type="submit" name="pay" value="Pay Now">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
