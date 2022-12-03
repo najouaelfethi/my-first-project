@@ -1,6 +1,5 @@
  ## General info
  this project is a bus abonnement site.
- ## Requirements
  ## How to Install and Run the Project
  *About data base*
  1. Install Xampp from your browser
