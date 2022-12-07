@@ -1,9 +1,5 @@
- <img
-  src=![logo-bus](https://user-images.githubusercontent.com/80290373/206314350-2fb31246-3806-4113-a0f7-bab7db7b09ef.png)
-  alt="Alt text"
-  title="Optional title"
-  style="display: inline-block; margin: 0 auto; max-width: 300px">
-  </img>
+ ![logo-bus](https://user-images.githubusercontent.com/80290373/206314350-2fb31246-3806-4113-a0f7-bab7db7b09ef.png)
+  
  ## Project description
  The goal is to build a bus website that offers an online subscribation and payment. 
  ## How to Install and Run the Project
