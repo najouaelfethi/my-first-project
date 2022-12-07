@@ -1,5 +1,5 @@
- ## General info
- this project is a bus abonnement site.
+ ## Project description
+ The goal is to build a bus website that offers an online subscribation and payment. 
  ## How to Install and Run the Project
  *About data base*
  1. Install Xampp from your browser
