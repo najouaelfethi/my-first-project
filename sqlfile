@@ -7,10 +7,11 @@ CREATE TABLE `client` (
   `prenom` varchar(27) NOT NULL,
   `username` varchar(27) NOT NULL,
   `adresse` varchar(50) NOT NULL,
-  `cin` varchar(10) primay key ,
+  `cin` varchar(10) PRIMARY KEY ,
   `email` varchar(30) NOT NULL,
-  `photofilename` varchar(100) NOT NULL,
-  `pwd` varchar(30) NOT NULL
+  `pwd` varchar(30) NOT NULL,
+  `check` varchar(30) NOT NULL,
+  `filename` varchar(100) NOT NULL
 )
 --Create table etudiant
 
